@@ -4,11 +4,12 @@
   padding-bottom: 55px
   &-blocks
     display: flex
-    justify-content: space-between
+    gap: 20px
+    // justify-content: space-between
     flex-wrap: wrap
   &-block
     display: flex
-    flex-basis: 31%
+    flex: 1 0 30%
     padding: 28px 19px
     margin-bottom: 30px
     align-items: center
@@ -26,10 +27,11 @@
 
 .numbers
   text-align: center
+  display: flex
+  gap: 20px
   &-block
-    display: inline-block
+    flex: 1 1 33.33%
     margin-bottom: 37px
-    width: 32%
     vertical-align: top
     &__title
       margin-bottom: 10px
@@ -41,3 +43,34 @@
     &__text
       font-size: 16px
       font-weight: 300
+
+
+@media screen and (max-width: 992px)
+  .features
+    &-block
+      margin-bottom: 0
+      flex: 1 1 45%
+
+  .numbers
+    &-block
+      &__title
+        font-size: 26px
+
+@media screen and (max-width: 768px)
+  .features
+    &-block
+      margin-bottom: 0
+      flex: 1 1 100%
+
+  .numbers
+    flex-direction: column
+    margin-bottom: 30px
+    &-block
+      margin-bottom: 0
+
+@media screen and (max-width: 576px)
+  .features
+    &-blocks
+      flex-direction: column
+  .button
+    padding: 10px 15px

@@ -3,20 +3,18 @@
   background: #373737 url(../img/main/main-bg.jpg) center no-repeat
   background-size: cover
   color: $text-color-light
-  // оформление главной картинки
   &-image
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      width: 390px
-      height: 390px
-      left: 50%
-      margin-left: -195px
-      border: 1px solid #ffffff
-      border-radius: 50%
-      z-index: -1
-  // заголовок
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   width: 390px
+    //   height: 390px
+    //   left: 50%
+    //   margin-left: -195px
+    //   border: 1px solid #ffffff
+    //   border-radius: 50%
+    //   z-index: -1
   &-text
     &__title
       font-size: 41px
@@ -54,3 +52,43 @@
   &-small
     font-size: 14px
     font-weight: 300
+
+@media screen and (max-width: 992px) 
+  // .main
+  //   &-image
+  //     &::before
+  //       width: 320px
+  //       height: 320px
+  //       left: 60%
+  //       top: -20%
+
+@media screen and (max-width: 576px) 
+  .main
+    text-align: center
+    padding-top: 50px
+    .hidden-mobile
+      display: none
+    & .col-md-7
+      width: 20px
+    &-text
+      &__title
+        font-size: 22px
+        color: $active-color
+      &__subtitle
+        font-size: 18px
+        margin-bottom: 40px
+      &__form
+        background-color: transparent
+        padding: 10px
+
+  .form
+    display: block
+    &-title
+      padding-right: 0
+      font-size: 15px
+      line-height: 1.4
+      &__important
+        margin-top: 10px
+    &__input
+      display: block
+      margin: 0 auto 13px

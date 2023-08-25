@@ -1,6 +1,7 @@
 .header
   padding: 15px 0
   &-logo
+    display: block
     background: url(../img/header-logo.png) center no-repeat
     background-size: 100%
     width: 191px
@@ -9,11 +10,43 @@
     display: flex
     justify-content: flex-end
     align-items: center
-    &__phone
-      &s
-        display: flex
+    &__phones
+      display: flex
       font-size: 22px
+    &__phone
+      color: inherit
       margin-right: 13px
       &:first-child
         border-right: 1px solid #cfcfd0
         padding-right: 13px
+
+
+@media screen and (max-width: 991px)
+  .header .hidden-mobile
+    display: none
+  .header-contacts__phones
+    margin: 0 auto
+    flex-direction: column
+  .header-contacts__phone:first-child
+    border-right: none
+    padding-right: 0
+
+@media screen and (max-width: 576px)
+
+  .header
+    &-logo
+      background: $active-color url(../img/header-logo_mobile.png) center no-repeat
+      width: 35px
+      height: 35px
+      border-radius: 4px
+    &-contacts
+      &__phones
+        flex-direction: column
+      &__phone
+        font-size: 14px
+        margin-right: 0px
+        &:first-child
+          border: none
+      &__button
+        display: inline-block
+        padding: 8px

@@ -1,0 +1,17 @@
+.header {
+  padding: 15px 0;
+}
+.header-contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-contacts__phones {
+  display: flex;
+  font-size: 22px;
+  margin-right: 13px;
+}
+.header-contacts__phones:first-child {
+  border-right: 1px solid #cfcfd0;
+  padding-right: 13px;
+}/*# sourceMappingURL=_header.css.map */
