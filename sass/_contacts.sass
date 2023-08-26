@@ -1,4 +1,7 @@
 .contacts
+  height: 550px
+  background: url(../img/backgrounds/map-bg.jpg) center
+  background-size: cover
   position: relative
   &-block
     position: absolute
@@ -17,3 +20,20 @@
       margin-top: 8px
     &__text
       margin-bottom: 25px
+    &__phone
+      display: block
+      color: inherit
+    &__mail
+      color: inherit
+
+
+@media screen and (max-width: 576px)
+  .contacts
+    iframe
+      height: 300px !important
+    &-block
+      text-align: center
+      width: 100%
+      // padding: 20px
+      left: 0
+      top: 300px

@@ -147,7 +147,7 @@ a {
 }
 .main {
   padding: 60px 0;
-  background: #373737 url(../img/main/main-bg.jpg) center no-repeat;
+  background: #373737 url(../img/backgrounds/main-bg.jpg) center no-repeat;
   background-size: cover;
   color: #ffffff;
 }
@@ -193,6 +193,7 @@ a {
   vertical-align: middle;
   width: 100%;
   max-width: 365px;
+  font-size: 14px;
 }
 .form-small {
   font-size: 14px;
@@ -249,17 +250,18 @@ a {
 }
 .overlay .popup {
   position: fixed;
-  width: 752px;
+  max-width: 752px;
+  width: 100%;
   top: 120px;
   left: 50%;
   transform: translateX(-50%);
+  color: #fff;
 }
 .overlay .popup-close {
   position: absolute;
   right: -20px;
   top: -33px;
   font-size: 35px;
-  color: #fff;
   font-weight: 300;
   cursor: pointer;
 }
@@ -269,7 +271,6 @@ a {
   width: 100%;
   min-height: 70px;
   background-color: #ff9d00;
-  color: #fff;
   text-transform: uppercase;
   font-size: 21px;
   font-weight: 500;
@@ -277,19 +278,23 @@ a {
   line-height: 70px;
 }
 .overlay .popup-form {
-  background: #373737 url(../img/modal-bg.jpg) center no-repeat;
+  background: #373737 url(../img/backgrounds/modal-bg.jpg) center no-repeat;
   background-size: cover;
   padding: 40px 80px 50px;
-  color: #fff;
 }
-.overlay .popup-form-header {
+.overlay .popup-form__container {
+  display: flex;
+  justify-content: center;
+}
+.overlay .popup-form__header {
   padding: 0;
   font-size: 30px;
   font-weight: 400;
   line-height: 27px;
   text-align: center;
 }
-.overlay .popup-form-header span {
+.overlay .popup-form__header span {
+  display: block;
   font-size: 24px;
 }
 .overlay .popup-form__label {
@@ -302,10 +307,12 @@ a {
   text-align: center;
 }
 .overlay .popup-form__input {
+  padding: 0 16px;
   border: none;
   width: 365px;
   height: 56px;
   border-radius: 4px;
+  font-size: 15px;
 }
 .overlay .popup-form__btn {
   width: 180px;
@@ -322,6 +329,48 @@ a {
   text-align: center;
 }
 
+@media screen and (max-width: 992px) {
+  .overlay .popup {
+    width: 92%;
+  }
+  .overlay .popup-close {
+    right: 20px;
+    top: 10px;
+  }
+  .overlay .popup-form__input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .overlay .popup-form {
+    padding: 40px;
+  }
+  .overlay .popup-form__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .overlay .popup-title {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .overlay .popup-form {
+    padding: 20px;
+  }
+  .overlay .popup-form__header {
+    font-size: 22px;
+  }
+  .overlay .popup-form__header span {
+    font-size: 18px;
+  }
+  .overlay .popup-form__input {
+    max-width: 250px;
+    width: 90%;
+  }
+}
 .features {
   background-color: #f4f4f4;
   padding-top: 50px;
@@ -432,7 +481,7 @@ a {
   padding-top: 40px;
   padding-bottom: 70px;
   color: #ffffff;
-  background: gray url(../img/offer/offer-bg.jpg) center no-repeat;
+  background: gray url(../img/backgrounds/offer-bg.jpg) center no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -463,6 +512,9 @@ a {
 }
 
 .contacts {
+  height: 550px;
+  background: url(../img/backgrounds/map-bg.jpg) center;
+  background-size: cover;
   position: relative;
 }
 .contacts-block {
@@ -484,4 +536,23 @@ a {
 }
 .contacts-block__text {
   margin-bottom: 25px;
+}
+.contacts-block__phone {
+  display: block;
+  color: inherit;
+}
+.contacts-block__mail {
+  color: inherit;
+}
+
+@media screen and (max-width: 576px) {
+  .contacts iframe {
+    height: 300px !important;
+  }
+  .contacts-block {
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */
